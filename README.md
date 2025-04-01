@@ -1,125 +1,40 @@
-﻿Sistema de Processamento de Dados ANS
-Autor: Gean
-Descrição: Conjunto de scripts para coleta, processamento e análise de dados da Agência Nacional de Saúde Suplementar (ANS).
+# Sistema de Processamento de Dados ANS
 
-🔧 Tecnologias Utilizadas
-Finalidade	Tecnologias
-Web Scraping	Java + Jsoup
-Processamento de PDF	Java + Apache PDFBox + Tabula
-Banco de Dados	MySQL
-API Backend	Python + Flask
-Análise de Dados	Python + Pandas
-📌 Funcionalidades
-1. Web Scraping e Download de Arquivos
-Acessa o portal da ANS automaticamente
+**Autor**: Gean  
+**Descrição**: Solução integrada para coleta, análise e visualização de dados da ANS.
 
-Filtra e baixa apenas os PDFs relevantes (Anexos I e II)
+## 🛠 Tecnologias
+- **Backend**: Java (scraping), Python (API Flask)
+- **Banco de Dados**: MySQL
+- **Frontend**: Vue.js
+- **Bibliotecas**: PDFBox, Tabula, Pandas
 
-Compacta os arquivos em ZIP
+## ⚙️ Pré-requisitos
+- Java JDK 8+
+- Python 3.8+
+- MySQL 5.7+
+- Node.js 14+
 
-2. Extração de Dados de PDF
-Extrai tabelas de PDFs usando técnicas avançadas
+## 📥 Instalação
+1. **Backend Java**:
+   - Instale as bibliotecas Jsoup, PDFBox e Tabula
+2. **API Python**:
+   ```bash
+   pip install flask flask-cors pandas mysql-connector-python
 
-Converte os dados para CSV formatado
+3. Front-End
 
-Substitui códigos por descrições legíveis
+npm install
 
-3. Carga no Banco de Dados
-Cria estrutura de tabelas temporárias
+API (Python):
 
-Importa dados de arquivos CSV
-
-Atualiza registros existentes sem duplicar
-
-4. Análise de Dados
-Identifica as operadoras com maiores despesas
-
-Gera relatórios consolidados por período
-
-5. API REST
-Disponibiliza endpoints para consulta
-
-Busca inteligente com paginação
-
-Normalização de textos
-
-⚙️ Configuração Necessária
-Pré-requisitos
-Java JDK 8+
-
-Python 3.8+
-
-MySQL 5.7+
-
-Node.js (apenas para frontend)
-
-Bibliotecas Python
-bash
-Copy
-pip install flask flask-cors pandas mysql-connector-python
-Bibliotecas Java
-jsoup-1.15.4.jar
-
-pdfbox-2.0.27.jar
-
-tabula-1.0.5.jar
-
-🚀 Como Executar
-1. Coleta de Dados (Java)
-bash
-Copy
-javac WebScraping.java
-java WebScraping
-2. Processamento de PDF (Java)
-bash
-Copy
-javac ExtractPdfTable.java
-java ExtractPdfTable
-3. API Backend (Python)
-bash
-Copy
 python api.py
-4. Análises (Python)
-bash
-Copy
-python analise_dados.py
+
+npm run serve
+
 🔍 Endpoints da API
-Método	Endpoint	Parâmetros	Descrição
-GET	/buscar	q, page, per_page	Busca de operadoras
-Exemplo de Uso:
-
-bash
-Copy
-curl "http://localhost:5000/buscar?q=saude&page=1"
-📊 Exemplo de Saída
-json
-Copy
-{
-  "total_results": 42,
-  "page": 1,
-  "results": [
-    {
-      "Razao_Social": "OPERADORA SAÚDE BRASIL LTDA",
-      "Cidade": "São Paulo",
-      "Despesas_Trimestre": "R$ 5.200.000,00"
-    }
-  ]
-}
-📝 Observações Importantes
-Ajuste os caminhos dos arquivos nos scripts conforme sua estrutura local
-
-Configure as credenciais do banco de dados nos scripts Python
-
-Para produção, considere:
-
-Usar variáveis de ambiente para senhas
-
-Implementar autenticação na API
-
-Configurar logging adequado
-
+Método	Endpoint	Função
+GET	/buscar	Busca operadoras por termo
 📄 Licença
 MIT License - Disponível para uso e modificação.
-
-Contato: Geanlucadias12@gmail.com
-Repositório: https://github.com/zGeanx/Teste-Intuitive_care
+Contato: geanlucadias12@gmail.com
