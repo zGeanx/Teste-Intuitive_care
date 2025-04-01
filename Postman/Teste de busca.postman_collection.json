@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "8cba8549-bd92-4811-84df-792a2e30acf5",
+		"name": "Teste de busca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43618821",
+		"_collection_link": "https://gean-2228337.postman.co/workspace/Gean's-Workspace~19c06e41-ea3b-4cdb-813a-1cd58a9650dc/collection/43618821-8cba8549-bd92-4811-84df-792a2e30acf5?action=share&source=collection_link&creator=43618821"
+	},
+	"item": [
+		{
+			"name": "Buscar Operadoras",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://192.168.8.2:5000/buscar",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"8",
+						"2"
+					],
+					"port": "5000",
+					"path": [
+						"buscar"
+					]
+				},
+				"description": "### GET /buscar\n\nThis endpoint is used to retrieve information about a specific item.\n\n#### Request\n\nNo request body is required for this endpoint.\n\n- URL: `http://192.168.8.2:5000/buscar`\n    \n- Method: `GET`\n    \n\n#### Response\n\nUpon a successful execution, the endpoint returns a JSON array with the following fields:\n\n- `Bairro` (string): The neighborhood information.\n    \n- `CEP` (string): The postal code information.\n    \n- `CNPJ` (string): The CNPJ information.\n    \n- `Cargo_Representante` (string): The representative's job title.\n    \n- `Cidade` (string): The city information.\n    \n- `Complemento` (string): Additional address information.\n    \n- `DDD` (string): The area code for the phone number.\n    \n- `Data_Registro_ANS` (string): The registration date with ANS.\n    \n- `Endereco_eletronico` (string): The electronic address information.\n    \n- `Fax` (string): The fax number.\n    \n- `Logradouro` (string): The street information.\n    \n- `Modalidade` (string): The modality information.\n    \n- `Nome_Fantasia` (string): The trade name information.\n    \n- `Numero` (string): The address number.\n    \n- `Razao_Social` (string): The company's legal name.\n    \n- `Regiao_de_Comercializacao` (string): The commercialization region information.\n    \n- `Registro_ANS` (string): The ANS registration information.\n    \n- `Representante` (string): The representative's name.\n    \n- `Telefone` (string): The telephone number.\n    \n- `UF` (string): The state information.\n    \n- `relevancia` (number): The relevance score.\n    \n\n#### Example\n\n``` json\n[\n    {\n        \"Bairro\": \"\",\n        \"CEP\": \"\",\n        \"CNPJ\": \"\",\n        \"Cargo_Representante\": \"\",\n        \"Cidade\": \"\",\n        \"Complemento\": \"\",\n        \"DDD\": \"\",\n        \"Data_Registro_ANS\": \"\",\n        \"Endereco_eletronico\": \"\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"\",\n        \"Modalidade\": \"\",\n        \"Nome_Fantasia\": \"\",\n        \"Numero\": \"\",\n        \"Razao_Social\": \"\",\n        \"Regiao_de_Comercializacao\": \"\",\n        \"Registro_ANS\": \"\",\n        \"Representante\": \"\",\n        \"Telefone\": \"\",\n        \"UF\": \"\",\n        \"relevancia\": 0\n    }\n]\n\n ```"
+			},
+			"response": []
+		}
+	]
+}
