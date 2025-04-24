@@ -32,6 +32,8 @@ python api.py
 
 npm run serve
 
+apos iniciar o servidor e a api, o endereço ficara localhost:5001
+
 🔍 Endpoints da API
 Método	Endpoint	Função
 GET	/buscar	Busca operadoras por termo
